@@ -1,0 +1,202 @@
+body {
+    background-color: #121212;  /* Fondo general oscuro */
+    color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: #1db954;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.btn-danger {
+    background-color: #ff4d4d;
+    border-color: #ff4d4d;
+}
+
+#sidebar.hidden {
+    transform: translateX(-100%); /* Mueve la barra lateral fuera de la vista */
+    transition: transform 0.3s ease; /* Transición suave al ocultar/mostrar */
+}
+
+#sidebar {
+    transition: transform 0.3s ease; /* Transición suave al mostrar */
+}
+
+#sidebar {
+    height: 100vh; /* Asegura que la barra lateral ocupe toda la altura de la ventana */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede la altura */
+    background-color: #111;
+    padding-top: 20px;
+    position: fixed;
+    width: 170px;
+    left: 0; /* Asegura que esté siempre a la izquierda */
+    top: 0; /* Comienza desde el inicio de la página */
+    bottom: 0; /* Se extiende hasta el final de la página */
+    z-index: 1000; /* Para asegurarse de que esté por encima de otros elementos */
+}
+
+.sidenav {
+    background-color: #1c1c1e;  /* Fondo más claro para mejorar contraste */
+    padding-top: 20px;
+    position: fixed;
+    width: 250px;  /* Aumentamos el ancho para mejorar la legibilidad */
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidenav h6 {
+    color: #f8f9fa;  /* Mejor contraste en títulos */
+    padding-left: 15px;
+}
+
+.sidenav a {
+    display: block;
+    padding: 10px;
+    color: #818181;
+    text-decoration: none;
+    font-size: 16px; /* Ajusta el tamaño del texto si es necesario */
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .fa, .material-icons {
+    margin-right: 10px;  /* Espacio para íconos */
+}
+
+
+.main-content {
+    margin-top: 80px;  /* Ajusta este valor al tamaño de tu navbar */
+    padding: 20px;
+}
+
+#playlist {
+    margin-top: 20px;
+}
+
+.playlist {
+    border: 1px solid #444;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.playlist:hover {
+    background-color: #333;
+}
+
+.song-card {
+    background-color: #2c2c2e;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.song-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.song-card .card-title {
+    font-size: 1.25rem;
+    color: #f8f9fa;
+}
+
+.song-card .card-text {
+    color: #bbb;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1030;  /* Asegúrate de que esté sobre otros elementos */
+    transition: top 0.3s ease;  /* Transición suave */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;  /* Tamaño mayor para el nombre de la app */
+    font-weight: bold;
+    color: #f8f9fa;
+}
+
+.navbar-nav .nav-link {
+    color: #bbb;  /* Color gris claro para los enlaces de la navbar */
+    font-size: 1rem;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;  /* Enlace cambia a blanco cuando se pasa el cursor */
+}
+
+#loginBtn, #logout-btn {
+    margin-left: 15px;
+}
+#track-progress, #volume-control {
+    width: 100%;
+    margin: 10px 0;
+    accent-color: #1db954;  /* Verde icónico de Spotify */
+}
+
+.player-controls {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#current-time, #total-time {
+    color: #bbb;
+}
+
+input[type="text"], input[type="range"] {
+    background-color: #333;
+    border: 1px solid #444;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+input[type="text"]:focus {
+    border-color: #1db954;  /* Verde en enfoque */
+    outline: none;
+}
+
+.btn-primary {
+    background-color: #1db954;  /* Verde Spotify */
+    border-color: #1db954;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1aa34a;  /* Verde oscuro */
+    border-color: #1aa34a;
+}
+#search-results, #playlists-section, #history-section {
+    margin-top: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#search-results h6, #playlists-section h6, #history-section h6 {
+    color: #1db954;  /* Verde icónico */
+    margin-bottom: 10px;
+}
+
+#search-results p, #history-section p {
+    color: #bbb;
+}

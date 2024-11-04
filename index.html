@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BritoMix - Spotify Like PWA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">ñ`YN
+    <title>BritoMix</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BritoMix</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <button id="toggleSidebar" class="btn btn-primary">Toggle Sidebar</button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Playlists</a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="search-form">
+                            <input type="text" id="search-input" placeholder="Buscar canción, artista o álbum">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </form>
+                        <div id="search-results"></div>
+                        
+                    </li>
+                </ul>
+                <button class="btn btn-outline-success" id="loginBtn">Iniciar Sesión</button>
+                <!-- Agregar el botón de cerrar sesión en la navbar -->
+<a href="#" id="logout-btn" class="btn btn-danger">Cerrar Sesión</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-3 bg-dark sidenav" id="sidebar">
+                <h6 class="text-white mt-3">Menu</h6>
+                <a href="#"><i class="fa fa-compass"></i>Explorar</a>
+                <a href="#"><i class="fa fa-volume-up"></i>Géneros</a>
+                <a href="#"><i class="material-icons">album</i>Álbumes</a>
+                <a href="#"><i class="material-icons">mic</i>Artistas</a>
+                <a href="#"><i class="material-icons">radio</i>Radio</a>
+                <hr>
+                <h6>Biblioteca</h6>
+                <a href="#"><i class="fa fa-history"></i> Historial</a>
+                <a href="#"><i class="fa fa-star"></i>Recomendaciones</a>
+                <a href="#"><i class="fa fa-folder"></i>Mis Playlists</a>
+                <a href="#"><i class="fa fa-cog"></i>Configuraciones</a>
+            </div>
+        
+            <div class="col-md-9 main-content">
+                <h1>Bienvenido a BritoMix</h1>
+                <div id="playlist"></div>
+                <input type="range" id="volume-control" min="0" max="100" value="50">
+                <form id="createPlaylistForm">
+                    <input type="text" id="playlistName" placeholder="Nombre de la playlist">
+                    <button type="submit" class="btn btn-primary">Crear Playlist</button>
+                </form>
+                <div id="playlists-section"></div>
+                <div class="player-controls">
+                    <input type="range" id="track-progress" value="0" min="0" max="100">
+                    <span id="current-time">00:00</span> / <span id="total-time">00:00</span>
+                    <div id="history-section">
+                        <h6>Historial de Reproducción</h6>
+                        <div class="col">
+                            <div class="card song-card">
+                                <img src="../img/alb.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre de la Canción</h5>
+                                    <p class="card-text">Artista</p>
+                                    <button class="btn btn-primary">Reproducir</button>
+                                    <button class="btn btn-secondary">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                                
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('toggleSidebar').addEventListener('click', function() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('hidden');
+});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
