@@ -112,7 +112,7 @@ const CACHE_NAME = 'britoMix-cache-v1';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/styles.css',
+    'assets/styles.css',
     '/app.js'
 ];
 
