@@ -1,6 +1,6 @@
 // Spotify API Authentication
-const client_id = 'YOUR_SPOTIFY_CLIENT_ID';  // Añade tu client_id de Spotify
-const redirect_uri = 'http://localhost:5500'; // Tu URL de redirección
+const client_id = '0aa5702ec8b74370973a296462924424';  // Añade tu client_id de Spotify
+const redirect_uri = 'https://criiis1.github.io/britimix/'; // Tu URL de redirección
 
 const loginBtn = document.getElementById('loginBtn');
 loginBtn.addEventListener('click', () => {
